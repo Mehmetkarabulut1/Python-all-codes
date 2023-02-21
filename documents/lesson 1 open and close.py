@@ -1,0 +1,5 @@
+open("bilgilerx.txt","w")
+file = open("bilgilerx.txt","w")
+file.close()
+file2 = open("C:/Users/mehmet karabulut/desktop/bilgisayar.txt","w")
+file2.close()
