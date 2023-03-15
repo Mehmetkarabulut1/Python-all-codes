@@ -1,31 +1,53 @@
-"""try:
-    print(x)
-except NameError:
-    print("code is working in except block")
+import math
 
-liste = ["mf45","mk","54km"]
+"""while True:
+    sayı = int(input("sayı giriniz. "))
+    SONUC = sayı * (sayı**(1/2) - (sayı - 1)**(1/2))
+    print(SONUC)
+    if sayı == 0:
+        break
 
-try:
-    x = "mehmet"
-    print(x)
-except:
-    print("ups!! this code doesnt work")
-else:
-    print("we dont have any problem")"""
 
-liste = ["345","mehmet","45as"]
-for i in liste:
-    if i != int(i):
-        raise TypeError("int veri tipinde değil")
+while True:
+    sayı = float(input("sayı giriniz. "))
+    SONUC = (1 - math.cos((math.pi/180) * sayı)) / math.sin((math.pi/180) * sayı)
+    print(SONUC)
 
-"""for i in liste:
-    try:
-        i == int(i)
-        print(i)
+    altı = float(input("altı bilimsel basamaklı sonucu yazınız"))
+    error = (SONUC - altı)/ SONUC
+    print(error)
+    if sayı == 1.1:
+        break
+        """
 
-    except:
-        print(i,", sring veri tipi içeriyor")
+a = input("""write the decimal part of the number in the next input...
+                        please enter your binary number:  """)
+decimal = input("""if you don't have decimal number, write pass...
+                        please enter your decimal part of number: """)
+
+b = len(a)
+c = len(decimal)
+toplam = 0
+
+for i in a:
+    if i == "1":
+        b = b - 1
+        i = int(i)
+        sonuc = i * (2 ** b)
+        toplam += sonuc
+    else:
+        b = b-1
+
+y = -1
+for x in decimal:
+    if x == "1":
+        x = int(x)
+        sonu = x * (2**y)
+        y = y-1
+        toplam += sonu
+    elif decimal == "pass":
         pass
-    """
+    else:
+        y = y-1
 
-
+print("your number converted to decimal format =" , toplam)
