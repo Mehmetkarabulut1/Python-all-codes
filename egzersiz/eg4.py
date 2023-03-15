@@ -1,3 +1,5 @@
+
+
 print("""
 ikinci dereceden kök bulma programına hoşgeldiniz
 ax^2 + bx + c formatında istenen a, b ve c değerleri giriniz !
@@ -53,6 +55,7 @@ di = n1**2 - 4*n0*n2
 print("diskriminant değeri {}" .format(di))
 x1 = (-n1 + (di ** (1 / 2))) / (2 * n0)
 x2 = (-n1 - (di ** (1 / 2))) / (2 * n0)
+
 if di > 0:
     print("denklemin reel kökü vardır!")
     print("kök 1: {} , kök 2: {}" .format(x1 , x2))

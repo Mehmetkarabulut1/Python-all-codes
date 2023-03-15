@@ -1,4 +1,4 @@
-def ebob(sayı, sayı2):
+def ebob(sayı, sayı1):
     liste = []
     ebobu = 1
     for i in range(1,sayı+1):

@@ -1,5 +1,6 @@
 import random
 import time
+
 class kumanda():
     def __init__(self,tv_durum = "kapalı",ses_durum = 0, kanal_durum = ["trt"], kanal = "trt" ):
         self.tv_durum = tv_durum
@@ -7,8 +8,10 @@ class kumanda():
         self.kanal_durum = kanal_durum
         self.kanal = kanal
 
+
     def tv_aç(self):
-        self.tv_durum == "açık"
+        self.tv_durum = "açık"
+
         """
         if self.tv_durum == "açık":
             print("televizyon zanten açık")

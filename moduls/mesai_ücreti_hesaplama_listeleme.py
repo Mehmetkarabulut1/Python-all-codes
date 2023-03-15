@@ -1,7 +1,7 @@
 mesai_ücret_isim_listesi = []
 
 def liste_ekleme():
-    global mesai_ücret_isim_listesi
+    #global mesai_ücret_isim_listesi
     mesai_ücret_isim_listesi.append((calısan_ismi + " = " +str(mesai_kazancı)))
     print(mesai_ücret_isim_listesi)
     return mesai_ücret_isim_listesi
