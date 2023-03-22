@@ -1,6 +1,6 @@
 class dersler():
     def __init__(self, vize_sayısı = 0 , ödev_sayısı = 0, final_sayısı = 0 , vize_oran = 0 , ödev_oran = 0 ,
-                 final_oran = 0 , başarı ="hesaplanmadı",vize_ortalama = 0 ,final_ortalama = 0 , ödev_ortalama = 0, seçim = "NoData"):
+                 final_oran = 0 , başarı ="hesaplanmadı",vize_ortalama = 0 ,final_ortalama = 0 , ödev_ortalama = 0, ders_adı = "NoData"):
         self.vize_sayısı = vize_sayısı
         self.ödev_sayısı = ödev_sayısı
         self.final_sayısı = final_sayısı
@@ -11,11 +11,11 @@ class dersler():
         self.vize_ortalama = vize_ortalama
         self.final_ortalama  = final_ortalama
         self.ödev_ortalama = ödev_ortalama
-        self.seçim = seçim
+        self.seçim = ders_adı
 
     def ders_girme(self):
-        seçim = input("ders giriniz: ")
-        self.seçim =seçim
+        ders_adı = input("ders giriniz: ")
+        self.seçim = ders_adı
 
     def vize_sgirme(self):
         while True:
@@ -74,27 +74,35 @@ class dersler():
             ort = "FF"
             print("Başarı harf notunuz: {}".format(ort))
             print(ort)
+            self.başarı = ort
         elif ortalama >= 90 and ortalama <= 100:
             ort = "AA"
             print("Başarı harf notunuz: {}".format(ort))
+            self.başarı = ort
         elif ortalama >= 85 and ortalama <= 100:
             ort = "BA"
             print("Başarı harf notunuz: {}".format(ort))
+            self.başarı = ort
         elif ortalama >= 80 and ortalama <= 100:
             ort = "BB"
             print("Başarı harf notunuz: {}".format(ort))
+            self.başarı = ort
         elif ortalama >= 75 and ortalama <= 100:
             ort = "CB"
             print("Başarı harf notunuz: {}".format(ort))
+            self.başarı = ort
         elif ortalama >= 70 and ortalama <= 100:
             ort = "CC"
             print("Başarı harf notunuz: {}".format(ort))
+            self.başarı = ort
         elif ortalama >= 65 and ortalama <= 100:
             ort = "DC"
             print("Başarı harf notunuz: {}".format(ort))
+            self.başarı = ort
         elif ortalama >= 60 and ortalama <= 100:
             ort = "DD"
             print("Başarı harf notunuz: {}".format(ort))
+            self.başarı = ort
         else:
             print(
                 """
@@ -104,8 +112,8 @@ class dersler():
             )
 
     def bilgiler(self):
-        return "seçim: {} \nvize sayısı: {}\nödev sayısı: {}\nfinal sayısı: {} \nvize oran: {} \nfinal oran: {} \nödev oran: {}"\
-            .format(self.seçim, self.vize_sayısı,self.ödev_sayısı,self.final_sayısı,self.vize_oran,self.final_oran,self.ödev_oran)
+        return "ders_Adı: {} \nvize sayısı: {}\nödev sayısı: {}\nfinal sayısı: {} \nvize oran: {} \nfinal oran: {} \nödev oran: {}\nharf notu : {}\n"\
+            .format(self.seçim, self.vize_sayısı,self.ödev_sayısı,self.final_sayısı,self.vize_oran,self.final_oran,self.ödev_oran , self.başarı)
 
 
 list_ders_bilgi = list()
@@ -120,4 +128,11 @@ while True:
     seçim.ödev_ogirme()
     seçim.başar()
     list_ders_bilgi.append(seçim.bilgiler())
-    print(list_ders_bilgi)
+    list_ders_bilgi.append("-------------\n")
+
+
+    with open("dönem.txt" ,"a" , encoding="utf-8") as file:
+        for i in list_ders_bilgi:
+            file.write(i)
+
+

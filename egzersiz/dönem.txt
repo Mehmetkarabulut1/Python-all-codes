@@ -1,0 +1,27 @@
+ders_Adı: matematik
+vize sayısı: 1
+ödev sayısı: 1
+final sayısı: 1
+vize oran: 1.0
+final oran: 1.0
+ödev oran: 1.0
+harf notu : hesaplanmadı
+-------------
+ders_Adı: kimya 
+vize sayısı: 1
+ödev sayısı: 1
+final sayısı: 1 
+vize oran: 0.4 
+final oran: 0.4 
+ödev oran: 0.2
+harf notu : DD
+-------------
+ders_Adı: akm 
+vize sayısı: 1
+ödev sayısı: 1
+final sayısı: 1 
+vize oran: 0.2 
+final oran: 0.2 
+ödev oran: 0.6
+harf notu : CC
+-------------
