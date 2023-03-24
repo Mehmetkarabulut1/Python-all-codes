@@ -29,13 +29,19 @@ with open("poem.txt","r",encoding="utf-8") as file:
 
 #question3
 with open("mails.txt","r",encoding="utf-8") as file:
-    list_of_gamils = []
+    list_of_gmails = []
     for i in file:
         word = i.strip()
-        x = word.endswith("gmail.com")
+        print(word)
+        x = word.endswith("mhmtmhmt1912@gmail.com")
+
         if x == True:
-            list_of_gamils.append(word)
-    print(list_of_gamils)
+            list_of_gmails.append((word))
+            with open("gmails.txt" , "r+", encoding="utf-8") as file1:
+                for i in list_of_gmails:
+                    file1.write(i)
+                    file1.write("\n")
+
 
 
 

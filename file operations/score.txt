@@ -79,3 +79,4 @@ Hanife Poçan,100,50,10
 Ayşe Kurutluoğlu,50,10,80
 Fatih Akman,100,10,60
 Mehmet Babacan,70,60,60
+Mehmet karabulut,70,80,100
